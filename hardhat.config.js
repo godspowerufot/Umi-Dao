@@ -5,7 +5,7 @@ const config = {
   defaultNetwork: "devnet",
   networks: {
     devnet: {
-      url: "https://devnet.moved.network",
+      url: "https://devnet.uminetwork.com",
       accounts: [
         "f287c7da2ab45d1ef1987544034e3580d326603a08f96a993cfea55b1c2d3424",
       ],

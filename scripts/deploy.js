@@ -20,7 +20,11 @@ bcs.registerEnumType("SerializableTransactionData", {
 const serialize = (bytecode) => {
   // Extract the byte array to serialize within the higher level enum
   const code = Uint8Array.from(Buffer.from(bytecode.replace("0x", ""), "hex"));
-  const evmContract = bcs.ser("ScriptOrDeployment", { EvmContract: code });
+  const evmContract = bcs.ser(
+    "ScriptOrDeployment",
+    { EvmContract: code },
+    { maxSize: 20480 }
+  );
   return "0x" + evmContract.toString("hex");
 };
 
